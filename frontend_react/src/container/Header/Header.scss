@@ -164,7 +164,6 @@
   img {
     width: 100%;
     object-fit: contain;
-    // min-height: 500px;
     z-index: 1;
   }
 
@@ -172,9 +171,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 15px;
     z-index: 0;
-    width: 100%;
+    width: 105%;
     height: 90%;
   }
 
