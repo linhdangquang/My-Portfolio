@@ -129,9 +129,21 @@
   position: relative;
   flex-direction: column;
 
-  h4 {
+  a {
     margin-top: 1rem;
     line-height: 1.5;
+    text-decoration: none;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50%;
+      width: 200%;
+      height: 400%;
+    }
   }
 
   .app__work-tag {

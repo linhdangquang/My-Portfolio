@@ -9,9 +9,9 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
+  console.log(works);
   useEffect(() => {
-    const query = `*[_type == "works"]`;
+    const query = `*[_type == "works"] | order(_createdAt desc)`;
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
@@ -35,11 +35,10 @@ const Work = () => {
     <>
       <h2 className='head-text'>
         My Creative <span>Portfolio</span>
-        section
       </h2>
 
       <div className='app__work-filter'>
-        {['Web App', 'Landing Page', 'React JS', 'All'].map((item, idx) => (
+        {['Web App', 'Landing Page', 'Template', 'Node JS', 'React JS', 'All'].map((item, idx) => (
           <div
             key={idx}
             onClick={() => handleWorkFilter(item)}
@@ -101,7 +100,7 @@ const Work = () => {
               </motion.div>
             </div>
             <div className='app__work-content app__flex'>
-              <h4 className='bold-text'>{work.title}</h4>
+              <a href={work.projectLink} target='_blank' className='bold-text' rel="noreferrer">{work.title}</a>
               <p className='p-text' style={{ marginTop: 10 }}>
                 {work.description}
               </p>

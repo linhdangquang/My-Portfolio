@@ -68,7 +68,7 @@
     margin: .75rem 0;
     border-radius: 10px;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
 
     transition: all 0.3s ease-in-out;
     input, textarea {
@@ -76,7 +76,7 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color) ;
+      background-color: var(--white-color) ;
       font-family: var(--font-base);
       color: var(--secondary-color);
       outline: none;
@@ -87,7 +87,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px var(--primary-color);
+      box-shadow: 0 0 25px var(--white-color);
     }
   }
 
