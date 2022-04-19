@@ -1,0 +1,3 @@
+[build]
+   base = "frontend_react/"
+   publish = "frontend_react/build"
