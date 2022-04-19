@@ -21,6 +21,14 @@ export default{
               hotspot: true,
             },
         },
-        
+    ],
+    orderings: [
+        {
+            title: 'Order by created date, ascending',
+            name: 'createdAt_ASC',
+            by : [
+                {field: '_createdAt', direction: 'asc'},
+            ]
+        }
     ]
 }

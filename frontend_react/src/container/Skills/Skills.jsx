@@ -8,8 +8,8 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [experiences, setExperiences] = useState([]);
   useEffect(() => {
-    const query = `*[_type == "experiences"]`;
-    const skillsQuery = `*[_type == "skills"]`;
+    const query = `*[_type == "experiences" ]` ;
+    const skillsQuery = `*[_type == "skills"] | order(_createdAt asc)`;
     client.fetch(query).then((data) => {
       setExperiences(data);
     });
@@ -41,7 +41,7 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <motion.div className='app__skills-exp'>
+        {/* <motion.div className='app__skills-exp'>
           {experiences?.map((exp) => (
             <motion.div className='app__skills-exp-item' key={exp.year}>
               <div className='app__skills-exp-year'>
@@ -74,7 +74,7 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </>
   );

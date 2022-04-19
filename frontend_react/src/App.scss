@@ -118,11 +118,16 @@
     align-items: center;
 
     transition: all 0.3s ease-in-out;
-
-    svg {
+    cursor: pointer;
+    a {
       width: 15px;
       height: 15px;
       color: var(--gray-color);
+      svg {
+        width: 15px;
+        height: 15px;
+        color: var(--gray-color);
+      }
     }
 
     &:hover {
