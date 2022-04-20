@@ -13,11 +13,10 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        I Know That <span>Good Development </span>
-        <br />
-        means <span>Good Business</span>
+      Learn to <span> work harder </span> on yourself than on your <span> job </span>.
       </h2>
-      <div className='app__profiles'>
+      <p className='bold-text'>I'm trying to be a fullstack developer.</p>
+      {/* <div className='app__profiles'>
         {abouts.map((about, idx) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -35,7 +34,7 @@ const About = () => {
             </p>
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
